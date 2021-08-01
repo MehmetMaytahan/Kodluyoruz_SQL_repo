@@ -110,7 +110,7 @@ SELECT * FROM film
 WHERE (rental_rate IN (0.99,2.99,4.99)) AND (replacement_cost IN (12.99,15.99,28.99));
 ```
 </details>
-</br>
+
 
 ***
 
@@ -165,8 +165,78 @@ WHERE (title LIKE 'C%') AND ( (length > 90) AND (rental_rate = 2.99 ) );
 ```
 </details>
 
+
+---
+
+# *Homework_4*
+
+<details close>
+<summary>Question_1 And Answer</summary>
+
+**film** tablosunda bulunan **replacement_cost** sütununda bulunan birbirinden farklı değerleri sıralayınız.
+
+```SQL
+SELECT DISTINCT(replacement_cost) FROM film;
+```
+</details>
+
 </br>
+
+<details close>
+<summary>Question_2 And Answer</summary>
+
+**film** tablosunda bulunan **replacement_cost** sütununda birbirinden farklı kaç tane veri vardır?
+
+```SQL
+SELECT COUNT(DISTINCT(replacement_cost)) FROM film;
+```
+</details>
+
+</br>
+
+<details close>
+<summary>Question_3 And Answer</summary>
+
+**film** tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+
+```SQL
+SELECT COUNT(*) FROM film
+WHERE (title LIKE 'T%') AND (rating = 'G');
+```
+</details>
+
+</br>
+
+<details close>
+<summary>Question_4 And Answer</summary>
+
+**country** tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+
+```SQL
+SELECT COUNT(*) FROM country
+WHERE (country ILIKE '_____');
+```
+</details>
+
+</br>
+
+<details close>
+<summary>Question_5 And Answer</summary>
+
+**city** tablosundaki şehir isimlerinin kaçtanesi 'R' veya r karakteri ile biter?
+
+```SQL
+SELECT COUNT(*) FROM city
+WHERE city ILIKE '%r';
+```
+</details>
+
+---
+
+
+
 ## Contributing
+
 Please open a thread for changes..!
 
 ## License
