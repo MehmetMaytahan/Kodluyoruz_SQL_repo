@@ -165,7 +165,6 @@ WHERE (title LIKE 'C%') AND ( (length > 90) AND (rental_rate = 2.99 ) );
 ```
 </details>
 
-
 ---
 
 # *Homework_4*
@@ -233,7 +232,53 @@ WHERE city ILIKE '%r';
 
 ---
 
+# *Homework_5*
 
+<details close>
+<summary>Question_1 And Answer</summary>
+
+**film** tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
+
+```SQL
+SELECT * FROM film
+WHERE title LIKE '%n'
+ORDER BY length DESC
+LIMIT 5;
+```
+</details>
+
+</br>
+
+<details close>
+<summary>Question_2 And Answer</summary>
+
+**film** tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en kısa (length) ikinci 5 filmi sıralayınız.
+
+```SQL
+SELECT * FROM film
+WHERE title LIKE '%n'
+ORDER BY length ASC
+OFFSET 5
+LIMIT 5;
+```
+</details>
+
+</br>
+
+<details close>
+<summary>Question_3 And Answer</summary>
+
+**customer** tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
+
+```SQL
+SELECT * FROM customer
+WHERE store_id = 1
+ORDER BY last_name DESC
+LIMIT 4;
+```
+</details>
+
+</br>
 
 ## Contributing
 
