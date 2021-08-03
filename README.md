@@ -280,6 +280,8 @@ LIMIT 4;
 
 </br>
 
+---
+
 # *Homework_6*
 
 <details close>
@@ -334,6 +336,68 @@ WHERE length > 150 ;
 </details>
 
 </br>
+
+--- 
+
+# *Homework_7*
+
+<details close>
+<summary>Question_1 And Answer</summary>
+
+**film** tablosunda bulunan filmleri **rating** değerlerine göre gruplayınız.
+
+```SQL
+SELECT rating , COUNT(*) FROM film
+GROUP BY rating;
+```
+</details>
+
+</br>
+
+<details close>
+<summary>Question_2 And Answer</summary>
+
+**film** tablosunda bulunan filmleri **replacement_cost** sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement_cost değerini ve karşılık gelen film sayısını sıralayınız.
+
+```SQL
+SELECT replacement_cost , COUNT(*) FROM film
+GROUP BY replacement_cost
+HAVING COUNT(*) > 50;
+```
+</details>
+
+</br>
+
+<details close>
+<summary>Question_3 And Answer</summary>
+
+**customer** tablosunda bulunan **store_id** değerlerine karşılık gelen müşteri sayılarını nelerdir?
+fazla olan replacement_cost değerini ve karşılık gelen film sayısını sıralayınız.
+
+```SQL
+SELECT store_id, COUNT(*) FROM customer
+GROUP BY store_id;
+```
+</details>
+
+</br>
+
+<details close>
+<summary>Question_4 And Answer</summary>
+
+**city** tablosunda bulunan şehir verilerini **country_id** sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıra country_id bilgisini ve şehir sayısını paylaşınız.
+```SQL
+SELECT country_id , COUNT(*) FROM city
+GROUP BY country_id
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+```
+</details>
+
+</br>
+
+---
 
 ## Contributing
 
