@@ -5,8 +5,8 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) SQL eğitimi için hazırlamı
 https://www.postgresqltutorial.com/postgresql-sample-database/
 ```
 ***
+
 # *Homework_1*
-</br>
 
 <details close> 
 <summary>Question_1 And Answer</summary>
@@ -17,8 +17,6 @@ https://www.postgresqltutorial.com/postgresql-sample-database/
 SELECT title,description FROM film;
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_2 And Answer</summary>
@@ -31,8 +29,6 @@ WHERE ( length > 60 AND length < 75 );
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_3 And Answer</summary>
 
@@ -43,8 +39,6 @@ SELECT * FROM film
 WHERE (rental_rate = 0.99 AND replacement_cost = 12.99 OR replacement_cost = 28.99);
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_4 And Answer</summary>
@@ -57,8 +51,6 @@ WHERE (rental_rate = 0.99 AND replacement_cost = 12.99 OR replacement_cost = 28.
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_5 And Answer</summary>
 
@@ -70,11 +62,8 @@ WHERE NOT length > 50 AND (NOT (rental_rate = 2.99 OR rental_rate = 4.99 ));
 ```
 </details>
 
-
 ***
 # *Homework_2*
-
-</br>
 
 <details close>
 <summary>Question_1 And Answer</summary>
@@ -86,7 +75,6 @@ SELECT * FROM film
 WHERE replacement_cost BETWEEN 12.99 AND 16.98;
 ```
 </details>
-</br>
 
 <details close>
 <summary>Question_2 And Answer</summary>
@@ -98,7 +86,6 @@ SELECT first_name,last_name FROM actor
 WHERE first_name IN ('Penelope','Nick','Ed');
 ```
 </details>
-</br>
 
 <details close>
 <summary>Question_3 And Answer</summary>
@@ -110,7 +97,6 @@ SELECT * FROM film
 WHERE (rental_rate IN (0.99,2.99,4.99)) AND (replacement_cost IN (12.99,15.99,28.99));
 ```
 </details>
-
 
 ***
 
@@ -127,8 +113,6 @@ WHERE country LIKE 'A%a';
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_2 And Answer</summary>
 
@@ -139,8 +123,6 @@ SELECT country FROM country
 WHERE country LIKE '______%n';
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_3 And Answer</summary>
@@ -153,7 +135,6 @@ WHERE title ILIKE '%T%T%T%T%';
 ```
 </details>
 
-</br>
 <details close>
 <summary>Question_4 And Answer</summary>
 
@@ -179,8 +160,6 @@ SELECT DISTINCT(replacement_cost) FROM film;
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_2 And Answer</summary>
 
@@ -190,8 +169,6 @@ SELECT DISTINCT(replacement_cost) FROM film;
 SELECT COUNT(DISTINCT(replacement_cost)) FROM film;
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_3 And Answer</summary>
@@ -204,8 +181,6 @@ WHERE (title LIKE 'T%') AND (rating = 'G');
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_4 And Answer</summary>
 
@@ -216,8 +191,6 @@ SELECT COUNT(*) FROM country
 WHERE (country ILIKE '_____');
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_5 And Answer</summary>
@@ -247,8 +220,6 @@ LIMIT 5;
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_2 And Answer</summary>
 
@@ -263,8 +234,6 @@ LIMIT 5;
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_3 And Answer</summary>
 
@@ -278,8 +247,6 @@ LIMIT 4;
 ```
 </details>
 
-</br>
-
 ---
 
 # *Homework_6*
@@ -289,13 +256,10 @@ LIMIT 4;
 
 film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
 
-
 ```SQL
 SELECT AVG(rental_rate) FROM film;
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_2 And Answer</summary>
@@ -308,8 +272,6 @@ WHERE title LIKE 'C%';
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_3 And Answer</summary>
 
@@ -320,8 +282,6 @@ SELECT MAX(length) FROM film
 WHERE rental_rate = 0.99;
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_4 And Answer</summary>
@@ -334,8 +294,6 @@ SELECT COUNT(DISTINCT replacement_cost) FROM film
 WHERE length > 150 ;
 ```
 </details>
-
-</br>
 
 --- 
 
@@ -352,8 +310,6 @@ GROUP BY rating;
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_2 And Answer</summary>
 
@@ -366,8 +322,6 @@ HAVING COUNT(*) > 50;
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_3 And Answer</summary>
 
@@ -379,8 +333,6 @@ SELECT store_id, COUNT(*) FROM customer
 GROUP BY store_id;
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_4 And Answer</summary>
@@ -395,8 +347,6 @@ LIMIT 1;
 
 ```
 </details>
-
-</br>
 
 ---
 
@@ -417,8 +367,6 @@ CREATE TABLE employee (
 
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_2 And Answer</summary>
@@ -480,8 +428,6 @@ insert into employee (id, name, birthday, email) values (50, 'Jacquie', '11/27/2
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_3 And Answer</summary>
 
@@ -515,8 +461,6 @@ WHERE name LIKE 'C%'
 RETURNING *;
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_4 And Answer</summary>
@@ -560,8 +504,6 @@ INNER JOIN country ON city.country_id = country.country_id;
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_2 And Answer</summary>
 
@@ -572,8 +514,6 @@ SELECT payment_id, first_name, last_name FROM customer
 INNER JOIN payment ON customer.customer_id = payment.customer_id;
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_3 And Answer</summary>
@@ -601,8 +541,6 @@ LEFT JOIN city ON city.country_id = country.country_id;
 ```
 </details>
 
-</br>
-
 <details close>
 <summary>Question_2 And Answer</summary>
 
@@ -613,8 +551,6 @@ SELECT payment_id, first_name, last_name FROM customer
 RIGHT JOIN payment ON customer.customer_id = payment.customer_id;
 ```
 </details>
-
-</br>
 
 <details close>
 <summary>Question_3 And Answer</summary>
@@ -628,6 +564,99 @@ FULL JOIN rental ON customer.customer_id = rental.customer_id;
 </details>
 
 ***
+
+# *Homework_11*
+
+<details close>
+<summary>Question_1 And Answer</summary>
+
+**actor** ve **customer** tablolarında bulunan **first_name** sütunları için tüm verileri sıralayalım.
+```SQL
+(
+SELECT first_name FROM actor
+)
+UNION ALL
+(
+SELECT first_name FROM customer
+)
+ORDER BY first_name;
+```
+</details>
+
+<details close>
+<summary>Question_2 And Answer</summary>
+
+**actor** ve **customer** tablolarında bulunan **first_name** sütunları için kesişen verileri sıralayalım.
+```SQL
+(
+SELECT first_name FROM actor
+)
+INTERSECT
+(
+SELECT first_name FROM customer
+)
+ORDER BY first_name;
+```
+</details>
+
+<details close>
+<summary>Question_3 And Answer</summary>
+
+**actor** ve **customer** tablolarında bulunan **first_name** sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+```SQL
+(
+SELECT first_name FROM actor
+)
+EXCEPT
+(
+SELECT first_name FROM customer
+)
+ORDER BY first_name;
+```
+</details>
+
+<details close>
+<summary>Question_4 And Answer</summary>
+
+İlk 3 sorguyu tekrar eden veriler için de yapalım.
+
+```SQL
+-- 4.1
+(
+SELECT first_name FROM actor
+)
+UNION ALL
+(
+SELECT first_name FROM customer
+)
+ORDER BY first_name;
+```
+```SQL
+-- 4.2
+(
+SELECT first_name FROM actor
+)
+INTERSECT ALL
+(
+SELECT first_name FROM customer
+)
+ORDER BY first_name;
+```
+```SQL
+-- 4.3
+(
+SELECT first_name FROM actor
+)
+EXCEPT ALL
+(
+SELECT first_name FROM customer
+)
+ORDER BY first_name;
+```
+</details>
+
+</br>
+
 
 ## Contributing
 
