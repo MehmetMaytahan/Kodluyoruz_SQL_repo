@@ -655,8 +655,59 @@ ORDER BY first_name;
 ```
 </details>
 
-</br>
+***
 
+# *Homework_12*
+
+<details close>
+<summary>Question_1 And Answer</summary>
+
+film tablosunda film uzunluğu length sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
+```SQL
+SELECT COUNT(*) FROM film
+WHERE length > (SELECT AVG(length)FROM film);
+```
+</details>
+
+<details close>
+<summary>Question_2 And Answer</summary>
+
+**film** tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?
+
+```SQL
+SELECT COUNT(*) FROM film
+WHERE rental_rate = (SELECT MAX(rental_rate) FROM film);
+```
+</details>
+
+<details close>
+<summary>Question_3 And Answer</summary>
+
+**film** tablosunda en düşük rental_rate ve en düşük replacement_cost değerlerine sahip filmleri sıralayınız.
+
+```SQL
+SELECT replacement_cost, (SELECT MIN(rental_rate) AS rental_rate FROM film) FROM film
+WHERE replacement_cost = ANY
+(
+SELECT MIN(replacement_cost) FROM film
+);
+```
+</details>
+
+<details close>
+<summary>Question_4 And Answer</summary>
+
+**payment** tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+
+```SQL
+SELECT customer.customer_id, first_name, last_name, COUNT(*) AS shopping_max FROM customer
+LEFT JOIN payment ON payment.customer_id = customer.customer_id
+GROUP BY customer.customer_id, first_name, last_name
+ORDER BY shopping_max DESC;
+```
+</details>
+
+***
 
 ## Contributing
 
